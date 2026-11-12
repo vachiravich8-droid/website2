@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>แมพ Roblox</title>
+  <meta name="description" content="รวมแมพ Roblox ทั้งหมด พร้อมยอดคนเล่นสดและช่องทางติดต่อ">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+  <canvas id="terrain" aria-hidden="true"></canvas>
+  <div class="veil" aria-hidden="true"></div>
+  <div id="progress" aria-hidden="true"></div>
+  <aside id="rail" aria-hidden="true"><i></i><span id="alt"></span></aside>
+  <div id="reticle" aria-hidden="true"><i></i><span></span></div>
+
+  <header class="bar">
+    <a class="mark" href="#top"><b></b><span data-bind="name"></span></a>
+    <nav>
+      <a href="#maps">แมพ</a>
+      <a href="#log" data-section-link="log">อัปเดต</a>
+      <a href="#contact" data-section-link="contact">ติดต่อ</a>
+    </nav>
+    <p class="pulse" id="pulse" hidden><i></i><span></span></p>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow"><span>แฟ้มรวมแมพ</span><span id="clock"></span></p>
+      <h1 id="title" aria-live="polite"></h1>
+      <p class="tagline" data-bind="tagline"></p>
+      <dl class="tally">
+        <div><dt>กำลังเล่นตอนนี้</dt><dd data-count="playing">0</dd></div>
+        <div><dt>เข้าเล่นสะสม</dt><dd data-count="visits">0</dd></div>
+        <div><dt>แมพทั้งหมด</dt><dd data-count="maps">0</dd></div>
+      </dl>
+      <a class="descend" href="#maps">เลื่อนลงไปดูแมพ <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <div class="ticker" aria-hidden="true"><div id="ticker"></div></div>
+
+    <section class="block" id="maps">
+      <header class="block-head reveal">
+        <span class="ghost" data-p aria-hidden="true">01</span>
+        <span class="no">01</span>
+        <h2><span>แมพทั้งหมด</span></h2>
+        <p data-bind="about"></p>
+      </header>
+      <div id="map-list"></div>
+    </section>
+
+    <section class="block" id="log" hidden>
+      <header class="block-head reveal">
+        <span class="ghost" data-p aria-hidden="true">02</span>
+        <span class="no">02</span>
+        <h2><span>บันทึกอัปเดต</span></h2>
+      </header>
+      <ol id="log-list"></ol>
+    </section>
+
+    <section class="block" id="contact" hidden>
+      <header class="block-head reveal">
+        <span class="ghost" data-p aria-hidden="true">03</span>
+        <span class="no">03</span>
+        <h2><span>ช่องทางติดต่อ</span></h2>
+        <p>เจอบั๊ก มีไอเดียแมพใหม่ หรืออยากชวนเล่น ทักมาได้ทุกช่องทาง</p>
+      </header>
+      <ul id="link-list"></ul>
+    </section>
+  </main>
+
+  <div id="outro" data-p aria-hidden="true"><span></span></div>
+
+  <footer class="foot">
+    <span data-bind="name"></span>
+    <span>ไม่มีส่วนเกี่ยวข้องกับ Roblox Corporation</span>
+  </footer>
+
+  <script type="module" src="/js/site.js"></script>
+</body>
+</html>

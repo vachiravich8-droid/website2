@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>หลังบ้าน</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+  <form id="gate" hidden>
+    <h1 id="gate-title"></h1>
+    <p id="gate-help"></p>
+    <label>รหัสผ่าน
+      <input id="gate-password" type="password" required autocomplete="current-password">
+    </label>
+    <button type="submit" id="gate-submit"></button>
+    <p class="error" id="gate-error" role="alert"></p>
+  </form>
+
+  <div id="panel" hidden>
+    <header>
+      <h1>หลังบ้าน</h1>
+      <a href="/" target="_blank" rel="noopener">เปิดหน้าเว็บ ↗</a>
+      <button type="button" id="logout" class="ghost">ออกจากระบบ</button>
+      <button type="button" id="save" disabled>บันทึกแล้ว</button>
+    </header>
+    <nav id="tabs" role="tablist">
+      <button type="button" role="tab" data-tab="games">แมพ</button>
+      <button type="button" role="tab" data-tab="links">ช่องทางติดต่อ</button>
+      <button type="button" role="tab" data-tab="updates">อัปเดต</button>
+      <button type="button" role="tab" data-tab="profile">โปรไฟล์</button>
+    </nav>
+    <main id="view"></main>
+  </div>
+
+  <p id="toast" role="status" aria-live="polite"></p>
+  <script src="/admin/admin.js" defer></script>
+</body>
+</html>
